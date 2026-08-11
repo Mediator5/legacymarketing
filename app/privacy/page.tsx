@@ -38,7 +38,7 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <main className="bg-light-depth">
-      <div className="container-luxe max-w-3xl py-24 sm:py-32">
+      <div className="container-luxe max-w-3xl pb-24 pt-44 sm:pb-32 sm:pt-48">
         <Link
           href="/"
           className="text-[12px] uppercase tracking-[0.18em] text-gold-700 transition hover:text-gold-800"

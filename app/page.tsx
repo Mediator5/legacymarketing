@@ -1,4 +1,3 @@
-import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { TrustMarquee } from '@/components/TrustMarquee';
 import { About } from '@/components/About';
@@ -11,15 +10,12 @@ import { AdditionalServices } from '@/components/AdditionalServices';
 import { CtaBanner } from '@/components/CtaBanner';
 import { Faq } from '@/components/Faq';
 import { BookingSection } from '@/components/booking/BookingSection';
-import { Footer } from '@/components/Footer';
-import { MobileCta } from '@/components/MobileCta';
 import { StructuredData } from '@/components/StructuredData';
 
 export default function HomePage() {
   return (
     <>
       <StructuredData />
-      <Navbar />
       <main>
         <Hero />
         <TrustMarquee />
@@ -34,8 +30,6 @@ export default function HomePage() {
         <Faq />
         <BookingSection />
       </main>
-      <Footer />
-      <MobileCta />
     </>
   );
 }

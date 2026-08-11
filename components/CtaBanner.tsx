@@ -42,7 +42,7 @@ export function CtaBanner() {
                 Your next chapter
               </span>
 
-              <h2 className="mt-5 text-3xl leading-[1.12] sm:text-4xl lg:text-[3rem]">
+              <h2 className="mt-5 text-4xl leading-[1.12] text-white sm:text-5xl lg:text-[3.1rem]">
                 The version of you that turns heads is{' '}
                 <em className="not-italic text-gold-gradient-dark">one appointment away</em>.
               </h2>

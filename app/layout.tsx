@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Jost } from 'next/font/google';
 import './globals.css';
 import { BookingProvider } from '@/components/booking/BookingProvider';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+import { MobileCta } from '@/components/MobileCta';
 import { site } from '@/lib/site';
 
 const display = Cormorant_Garamond({
@@ -93,7 +96,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body className="min-h-screen overflow-x-hidden">
-        <BookingProvider>{children}</BookingProvider>
+        <BookingProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <MobileCta />
+        </BookingProvider>
       </body>
     </html>
   );

@@ -69,6 +69,22 @@ Almost everything is data, not markup:
 | Brand colours, fonts, gradients, animations | `tailwind.config.ts` |
 | Testimonials | `components/Testimonials.tsx` |
 
+### Pages
+
+| Route | What it is |
+| --- | --- |
+| `/` | Home — unchanged, all original sections |
+| `/about` | Story, six operating principles, will/won't-do, timeline, who it's for |
+| `/services` | Full detail per service: who it's for, what happens, what you leave with |
+| `/contact` | Contact channels, enquiry form, practical details, quick answers |
+| `/privacy`, `/terms` | Legal |
+
+Nav and footer live in `app/layout.tsx`, so every page shares them. Nav is pages-first (`lib/site.ts` → `navLinks`); the home-page section links route back with `/#process` style hrefs.
+
+The Services page pulls long-form copy from `lib/service-details.ts` — keys match the service ids in `lib/services.ts`, so adding a service means adding to both files.
+
+The Contact page's enquiry form posts to `/api/contact`, which uses the same Gmail credentials as booking. No extra setup.
+
 ### Booking: one form, two places
 
 `components/booking/BookingForm.tsx` holds the entire four-step flow. It is rendered twice:

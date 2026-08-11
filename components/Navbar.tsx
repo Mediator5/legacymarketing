@@ -64,13 +64,13 @@ export function Navbar() {
           <ul className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="group relative text-[14.5px] font-medium uppercase tracking-[0.14em] text-white/65 transition hover:text-white"
                 >
                   {link.label}
                   <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold-500 transition-all duration-300 group-hover:w-full" />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -121,13 +121,13 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.08 + i * 0.06, duration: 0.5 }}
                   >
-                    <a
+                    <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className="block border-b border-white/8 py-4 font-display text-3xl text-white/90 transition hover:text-gold-300"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>

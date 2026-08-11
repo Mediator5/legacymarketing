@@ -29,11 +29,24 @@ export const site = {
   },
 } as const;
 
+/** Top-level pages. Anchor links now live under the page they belong to. */
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Jewelry', href: '#jewelry' },
-  { label: 'Process', href: '#process' },
-  { label: 'Results', href: '#results' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Jewelry', href: '/services#jewelry' },
+  { label: 'Process', href: '/#process' },
+  { label: 'Results', href: '/#results' },
+  { label: 'Contact', href: '/contact' },
 ] as const;
+
+export const footerLinks = {
+  explore: [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Process', href: '/#process' },
+    { label: 'Client Results', href: '/#results' },
+    { label: 'FAQ', href: '/#faq' },
+  ],
+} as const;

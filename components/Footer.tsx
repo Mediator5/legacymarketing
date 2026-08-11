@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { BookNowLink } from '@/components/booking/BookNowLink';
-import { navLinks, site } from '@/lib/site';
+import { footerLinks, site } from '@/lib/site';
 import { services } from '@/lib/services';
 
 export function Footer() {
@@ -48,14 +48,14 @@ export function Footer() {
           <div>
             <h3 className="text-[12px] uppercase tracking-[0.2em] text-gold-300">Explore</h3>
             <ul className="mt-5 space-y-3">
-              {navLinks.map((l) => (
+              {footerLinks.explore.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-[15.5px] text-white/55 transition hover:text-gold-200"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
@@ -71,12 +71,12 @@ export function Footer() {
             <ul className="mt-5 space-y-3">
               {services.slice(0, 5).map((s) => (
                 <li key={s.id}>
-                  <a
-                    href="#services"
+                  <Link
+                    href={`/services#${s.id}`}
                     className="text-[15.5px] leading-snug text-white/55 transition hover:text-gold-200"
                   >
                     {s.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
