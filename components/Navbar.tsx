@@ -46,7 +46,7 @@ export function Navbar() {
             : 'border-b border-white/8 py-5',
         )}
       >
-        <nav className="container-luxe flex items-center justify-between gap-6">
+        <nav className="container-luxe flex items-center justify-between gap-4 xl:gap-8">
           <Link href="/" className="relative z-10 flex items-center" aria-label={site.name}>
             <Image
               src="/logo-web.png"
@@ -55,18 +55,18 @@ export function Navbar() {
               height={347}
               priority
               className={cn(
-                'w-auto transition-all duration-500',
-                scrolled ? 'h-14 sm:h-16 lg:h-[4.5rem]' : 'h-16 sm:h-20 lg:h-24',
+                'w-auto shrink-0 transition-all duration-500',
+                scrolled ? 'h-12 sm:h-14 lg:h-[4.25rem]' : 'h-14 sm:h-16 lg:h-[5.25rem]',
               )}
             />
           </Link>
 
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden shrink-0 items-center gap-5 lg:flex xl:gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="group relative text-[14.5px] font-medium uppercase tracking-[0.14em] text-white/65 transition hover:text-white"
+                  className="group relative whitespace-nowrap text-[13px] font-medium uppercase tracking-[0.12em] text-white/70 transition hover:text-white xl:text-[14px]"
                 >
                   {link.label}
                   <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold-500 transition-all duration-300 group-hover:w-full" />
@@ -75,18 +75,18 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden shrink-0 items-center gap-4 lg:flex">
             <a
               href={site.phoneHref}
-              className="flex items-center gap-2 text-[14.5px] tracking-wide text-white/60 transition hover:text-gold-300"
+              className="hidden shrink-0 items-center gap-2 whitespace-nowrap text-[14px] tracking-wide text-white/65 transition hover:text-gold-300 xl:flex"
             >
-              <Phone className="h-3.5 w-3.5" />
+              <Phone className="h-3.5 w-3.5 shrink-0" />
               {site.phone}
             </a>
             <button
               type="button"
               onClick={() => openBooking()}
-              className="rounded-full bg-gold-sheen bg-[length:200%_auto] px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-navy-950 shadow-gold-glow transition-all duration-300 hover:bg-[position:100%_50%]"
+              className="shrink-0 whitespace-nowrap rounded-full bg-gold-sheen bg-[length:200%_auto] px-6 py-3 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-navy-950 shadow-gold-glow transition-all duration-300 hover:bg-[position:100%_50%]"
             >
               Book a Consultation
             </button>

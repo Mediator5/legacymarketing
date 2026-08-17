@@ -14,14 +14,13 @@ export function Hero() {
   const { open: openBooking } = useBooking();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
-  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '10%']);
+  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
 
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-light-depth pt-40 sm:pt-44 lg:pt-40"
+      className="relative flex items-center overflow-hidden bg-light-depth pb-16 pt-36 sm:pb-20 sm:pt-40 lg:min-h-[92svh] lg:pb-24 lg:pt-44"
     >
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] noise" aria-hidden />
       <div
@@ -33,8 +32,8 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="container-luxe relative grid items-center gap-14 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-24">
-        <motion.div style={{ y: textY, opacity: fade }}>
+      <div className="container-luxe relative grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <motion.div style={{ y: textY }}>
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4.4rem]"
+            className="mt-6 text-[2.5rem] leading-[1.06] sm:text-6xl lg:text-[4.1rem]"
           >
             You already have it.
             <br />
@@ -69,7 +68,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-lg text-navy-700/65 sm:text-xl"
+            className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-lg text-navy-700/70 sm:text-xl"
           >
             {words.map((w, i) => (
               <motion.span
@@ -91,7 +90,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-7 max-w-xl text-[17px] leading-relaxed text-navy-800/72 sm:text-[18px]"
+            className="mt-6 max-w-xl text-[17px] leading-relaxed text-navy-800/80"
           >
             Private beauty, image, and fine jewelry consultation for women who are done blending in.
             One conversation, a clear plan, and a look that finally matches who you already are.
@@ -101,7 +100,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.58 }}
-            className="mt-10 flex flex-col gap-3.5 sm:flex-row sm:items-center"
+            className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
           >
             <button
               type="button"
@@ -123,7 +122,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.75 }}
-            className="mt-11 flex flex-wrap items-center gap-5"
+            className="mt-9 flex flex-wrap items-center gap-5"
           >
             <div className="flex -space-x-3">
               {images.avatars.map((src, i) => (
@@ -155,7 +154,7 @@ export function Hero() {
           transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-gold-500/25 shadow-luxe">
+          <div className="relative aspect-[4/5] max-h-[62svh] overflow-hidden rounded-[2rem] border border-gold-500/25 shadow-luxe lg:max-h-[64svh]">
             <BrandImage
               src={images.heroPortrait}
               alt="Client styled by Legacy Marketing and Consulting"
@@ -197,21 +196,16 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        style={{ opacity: fade }}
-        className="absolute inset-x-0 bottom-7 hidden justify-center lg:flex"
-      >
-        <div className="flex flex-col items-center gap-2.5">
-          <span className="text-[11px] uppercase tracking-luxe text-navy-700/58">Scroll</span>
-          <span className="relative h-12 w-px overflow-hidden bg-navy-900/14">
-            <motion.span
-              animate={{ y: ['-100%', '150%'] }}
-              transition={{ duration: 1.9, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute inset-x-0 h-5 bg-gold-400"
-            />
-          </span>
-        </div>
-      </motion.div>
+      <div className="pointer-events-none absolute bottom-8 right-8 hidden flex-col items-center gap-2.5 xl:flex">
+        <span className="text-[11px] uppercase tracking-luxe text-navy-700/50">Scroll</span>
+        <span className="relative h-12 w-px overflow-hidden bg-navy-900/14">
+          <motion.span
+            animate={{ y: ['-100%', '150%'] }}
+            transition={{ duration: 1.9, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute inset-x-0 h-5 bg-gold-400"
+          />
+        </span>
+      </div>
     </section>
   );
 }
