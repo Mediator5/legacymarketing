@@ -558,7 +558,7 @@ export function BookingForm({
                             value={consultTypes.find((c) => c.id === form.format)?.label ?? '—'}
                           />
                           <Row icon={CalendarIcon} label="Date" value={formatLongDate(form.date)} />
-                          <Row icon={Clock} label="Time" value={`${form.time} CST`} />
+                          <Row icon={Clock} label="Time" value={`${form.time} EST`} />
                           <Row
                             icon={User}
                             label="Name"

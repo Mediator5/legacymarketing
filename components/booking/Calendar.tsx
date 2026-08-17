@@ -145,7 +145,7 @@ export function Calendar({
       </div>
 
       <p className="mt-4 text-center text-[12px] text-navy-700/58">
-        Sundays unavailable · Times shown in CST
+        Sundays unavailable · Times shown in EST
       </p>
     </div>
   );

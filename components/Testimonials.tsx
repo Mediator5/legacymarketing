@@ -12,7 +12,7 @@ const testimonials = [
     quote:
       'I had been buying the same three colours for a decade because I was scared of getting it wrong. One session and I finally understand my own face. My husband asked what I did differently — I said everything.',
     name: 'Danielle R.',
-    role: 'Attorney · Houston',
+    role: 'Attorney · Wilmington',
     avatar: images.avatars[0],
   },
   {

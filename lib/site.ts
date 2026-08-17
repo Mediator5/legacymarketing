@@ -10,17 +10,17 @@ export const site = {
   description:
     'Luxury beauty, image, and fine jewelry consultation for women who are ready to be seen. Private one-on-one sessions, curated jewelry guidance, and consulting that builds a legacy.',
   // ── Edit these before launch ─────────────────────────────
-  email: 'hello@legacymarketingandconsultingllc.com',
-  phone: '+1 (000) 000-0000',
-  phoneHref: 'tel:+10000000000',
+  email: 'legacyconsultingllc2022@gmail.com',
+  phone: '(302) 287-0092',
+  phoneHref: 'tel:+13022870092',
   address: {
     street: '',
-    city: 'Houston',
-    region: 'TX',
+    city: 'Wilmington',
+    region: 'DE',
     postalCode: '',
     country: 'US',
   },
-  hours: 'Mon – Sat · 9:00 AM – 7:00 PM CST',
+  hours: 'Mon – Sat · 9:00 AM – 7:00 PM EST',
   socials: {
     instagram: 'https://instagram.com/',
     facebook: 'https://facebook.com/',

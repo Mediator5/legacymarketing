@@ -83,7 +83,7 @@ const detailRows = (b: BookingPayload) =>
     ['Service', b.serviceName],
     ['Format', b.format],
     ['Date', prettyDate(b.date)],
-    ['Time', `${b.time} CST`],
+    ['Time', `${b.time} EST`],
     ['Name', `${b.firstName} ${b.lastName}`],
     ['Email', b.email],
     ['Phone', b.phone],
@@ -126,7 +126,7 @@ export function clientEmail(b: BookingPayload) {
       <tr><td style="padding:9px 0;color:rgba(255,255,255,.42);font-size:13px;width:42%;">Service</td><td style="padding:9px 0;color:#fff;font-size:14px;">${esc(b.serviceName)}</td></tr>
       <tr><td style="padding:9px 0;color:rgba(255,255,255,.42);font-size:13px;">Format</td><td style="padding:9px 0;color:#fff;font-size:14px;">${esc(b.format)}</td></tr>
       <tr><td style="padding:9px 0;color:rgba(255,255,255,.42);font-size:13px;">Requested date</td><td style="padding:9px 0;color:#fff;font-size:14px;">${esc(prettyDate(b.date))}</td></tr>
-      <tr><td style="padding:9px 0;color:rgba(255,255,255,.42);font-size:13px;">Requested time</td><td style="padding:9px 0;color:#fff;font-size:14px;">${esc(b.time)} CST</td></tr>
+      <tr><td style="padding:9px 0;color:rgba(255,255,255,.42);font-size:13px;">Requested time</td><td style="padding:9px 0;color:#fff;font-size:14px;">${esc(b.time)} EST</td></tr>
     </table>
     <p style="margin:22px 0 0;">A member of our team will confirm this time within one business day. If you need to reach us sooner, reply to this email or call ${esc(site.phone)}.</p>
     <p style="margin:18px 0 0;font-family:Georgia,serif;font-style:italic;color:#d4af37;">Strategize. Elevate. Build. Leave a legacy.</p>`,
